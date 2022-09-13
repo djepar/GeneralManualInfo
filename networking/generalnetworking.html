@@ -7,10 +7,16 @@
     <title>General Networking</title>
 </head>
 <body>
-    <h1>General Networking</h1>
+    <nav>
+        Put nav here
+    </nav>
+
+    <div id="intro">
+        <h1>General Networking</h1>   
+    </div>
     <h2>Introduction to Network</h2>
-    <section>
-    <h3>Network categorized based on their geographic span</h3>
+   <section>
+    <h3 id="Network-category">Network categorized based on their geographic span</h3>
     <!-- The next session is all from Networking Essentials : Sixth edition by Jeffrey S. Beasley and Piyasat Nilkaew chapter 1 p.3-4 -->
     <dl>
         <dt>Personal Area Network (Pan)</dt>
@@ -37,9 +43,78 @@
     </section>
     <section>
         <!-- Inspired by Networking Essentials : Sixth edition by Jeffrey S. Beasley and Piyasat Nilkaew chapter 1 p.5-8  -->
-        <h3>Network Topologies</h3>
+        <h3 id="Network-Topologies">Network Topologies</h3>
         <p>Topology : the architecture of a network</p>
-        <h4>Ring Topology</h4>
+        <h4>Token-Ring Topology</h4>
+        <img src="Figures/fig1.png" alt="Ring Topology">
+        <p>Works through the passing of a token around the ring. </p>
+        <p>It's a deterministics network, meaning each station connected to the network is ensured access for transmission of its message at regular or fixed intervals.</p>
+        <p>Disadvantages : IP error message, token may stall, must break circle to add/remove a device. </p>
+        <h4>Star Topology</h4>
+        <img src="Figures/fig2.png" alt="Schematic Star Topology">
+        <img src="Figures/fig3.png" alt="Start Topology">
+        <p>Most common networking Topology in today's LANs. </p>
+        <p>All the devices are connected to a hub or a switch. They act as a multiport reader : "which means the data it receives is broadcast and seem by all devices connected to its ports." </p>
+        <h4>Bus Topology</h4>
+        <img src="Figures/fig4.png" alt="Bus topology">
+        <p>The computers share the media for data transmission through a coaxial cable.</p>
+        <h4>Mesh Topology</h4>
+        <img src="Figures/fig5.png" alt="Mesh Topology">
+        <p>All networking devices are all connected to each other. It's a costly installation, but useful for high-reliability application. </p>
+        
+    </section>
+    <h2>The OSI Model</h2>
+    <section>
+        <!--  Networking Essentials : Sixth edition by Jeffrey S. Beasley and Piyasat Nilkaew chapter 1 p.12-14 -->
+        <h3>Overview of the OSI Model</h3>
+        <quote>The OSI Model Contains seven layers that describe networking functions from the physical network interface to the software application interfaces.</quote>
+        <p>At each layer, they are different protocol that operate.</p>
+        <quote>Each layer performs data encapsulation by putting its own message format or header onto the data as it is being passed down from layer 7 to layer 1 for transmission. </quote>
+        <table>
+            <tr>
+                <th>Layer</th>
+                <th>Function</th>
+                <th>Examples</th>
+            </tr>
+            <tr>
+                <td>7. Application </td>
+                <td>Provides support for applications.</td>
+                <td>HTTP, FTP, SMP(email)</td>
+            </tr>
+            <tr>
+                <td>6. Presentation</td>
+                <td>Handle protocol conversation and data translation <br>(translation, compression, encryption, decryption)</td>
+                <td>ASCII, JPEG, SSL</td>
+            </tr>
+            <tr>
+                <td>5. Session</td>
+                <td>Established, manages and terminates sessions</td>
+                <td>NFS, SQL, API</td>
+            </tr>
+            <tr>
+                <td>4. Transport</td>
+                <td>Handles end-to-end delivery to ensure error-free packets.</td>
+                <td>TCP, UDPP</td>
+            </tr>
+            <tr>
+                <td>3. Network</td>
+                <td>Provides addressing and routing decisions</td>
+                <td>IP, ICMP</td>
+            </tr>
+            <tr>
+                <td>2. Data Link</td>
+                <td>For the flow of data</td>
+                <td>Examples</td>
+            </tr>
+            <tr>
+                <td>1. Physical</td>
+                <td>Handles signals and media</td>
+                <td>NICs, twisted-pair cable, fiber, wireless</td>
+            </tr>
+        </table>
+    </section>
+    <section id="OSI-Physical">
+        <h3>Physical Layer</h3>
     </section>
 </body>
 </html>
