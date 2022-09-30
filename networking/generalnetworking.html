@@ -65,7 +65,7 @@
     </section>
     <h2>The OSI Model</h2>
     <section>
-        <!--  Networking Essentials : Sixth edition by Jeffrey S. Beasley and Piyasat Nilkaew chapter 1 p.12-14 -->
+        <!--  Networking Essentials : Sixth edition by Jeffrey S. Beasley and Piyasat Nilkaew chapter 1 p.12-14 Also the -->
         <h3>Overview of the OSI Model</h3>
         <quote>The OSI Model Contains seven layers that describe networking functions from the physical network interface to the software application interfaces.</quote>
         <p>At each layer, they are different protocol that operate.</p>
@@ -114,7 +114,65 @@
         </table>
     </section>
     <section id="OSI-Physical">
-        <h3>Physical Layer</h3>
+        <h3>1. Physical Layer</h3>
+        <p>Electrical and mechanical connection to the network</p>
+        <h4>Equipments: </h4>
+        <ul>
+            <li>Unshielded twisted-pair(UTP)</li>
+            <li>Fiber, network interface card(NICs)</li>
+        </ul>
+    </section>
+    <section id="OSI-DataLink">
+        <h3>2. Data-Link Layer</h3>
+        <p>Handle errory recovery, flow control (synchronization) and sequencing (for receiving and sending). Sometime call the Media Access Control Layer (MAC layer) because it's where the MAC addressing is defined.</p>
+        <dl>
+            <dt>Protocol</dt>
+            <dd>Ethernet 802.3 standard</dd>
+            <dt>Addressing</dt>
+            <dd>MAC address</dd>
+        </dl>
+    </section>
+    <section  id="OSI-Network">
+        <h3>Network Layer</h3>
+        <p>Accepts outgoing messages which are combines or segmented into packts. A header is added with routing information</p>
+        <p>Protocol : Internet Protocol</p>
+    </section>
+    <section  id="OSI-Transport">
+        <h3>Transport Layer</h3>
+            <p>The end-toend delivery between devices. Primary goald is the integrity of the message between the source and the destination. Reassemble the segments and packets and handle the flow control.</p>
+        </h3>
+        <dl>
+            <dt>Protocol</dt>
+            <dd>Transmission Control Protocol (TCP) or User Datagram Protocol (UDP) and more...</dd>
+        </dl>
+    </section>
+    <section id="OSI-Session">
+        <h3>Session Layer</h3>
+        <p><quote>This layer provides the control functions necessary to established, manage and terminate connections, as required, to satisfy user requests. (Beasley, Nilkaew 2014. p. 13)</quote></p>
+        <dl>
+            <dt>Technologies </dt>
+            <dd>Network File System (NFS), Structured Query Language (SQL)</dd>
+        </dl>
+    </section>
+    <section id="OSI-Presentation">
+        <h3>Presentation Layer</h3>
+        <p><quote>This layer accepts and structures messages for an application.(Beasley, Nilkaew 2014. p. 13-14)</quote>Can also translates the message from one code to another. Encrypt and compress data.</p>
+        <dl>
+            <dt>Technologies</dt>
+            <dd>American Standard Code for Information Interchange(ASCII) and Joint Pohotographic Expert Group (JPEG)</dd>
+        </dl>
+    </section>
+    <section id="OSI-Application">
+        <h3>Application Layer</h3>
+        <p><quote>this layer intereacts with application programs that incorporate a communication component such as an Internet browser and email. This layer is responsible for logging in the message, interpreting the request, and determining what information is needed to support the request.</quote></p>
+        <ul>
+            <li>HyperText Transfer Protocol (HTTP) --> web browser</li>
+            <li>File Transfert Protocol (FTP) --> transfering files</li>
+            <li>Simple Mail Transfer Protocol (SMTP) --> email transmission</li>
+        </ul>
+    </section>
+    <section>
+        <h3>The Ethernet lan</h3>
     </section>
 </body>
 </html>
